@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class NotificationConfiguration extends Model
+{
+    use HasFactory;
+
+    protected $table = 'tbl_notification_configuration';
+    protected $guarded = array();
+
+    protected $casts = [
+        'id' => 'integer',
+        'type' => 'string',
+        'send_mail' => 'integer',
+        'send_notification' => 'integer',
+        'day' => 'integer',
+        'status' => 'integer',
+    ];
+}
